@@ -1,0 +1,39 @@
+#titulo {
+    text-shadow: 2px 3px 30px rgb(72, 82, 73);
+    font-size: 50px;
+    text-align: center;
+}
+
+body{ 
+    background :rgb(76, 121, 173);
+}
+
+a {
+    text-decoration: none;
+}
+
+#navegacion {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    text-shadow: 1px 20px 40px rgb(255, 255, 255);
+}
+
+.noticiaslocales{
+    font-size: 15px;
+    font-family: cursive, helvetica, sans-serif;
+}
+span{
+    font-size: 15px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: 1000;
+}
+#libro {
+    border-style: solid;
+    border-radius: 16px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-width:5px;
+    width: 15%;
+}
