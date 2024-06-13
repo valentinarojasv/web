@@ -1,11 +1,11 @@
-#titulo {
+.titulo {
     text-shadow: 2px 3px 30px rgb(72, 82, 73);
-    font-size: 50px;
+    font-size: 32px;
     text-align: center;
 }
 
 body{ 
-    background :rgb(76, 121, 173);
+    background :rgb(100, 141, 189);
 }
 
 a {
@@ -37,3 +37,37 @@ span{
     border-width:5px;
     width: 15%;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #557aaa;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+img{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+}
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    background-color: #96b1d4;
+  }
