@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,14 @@
     <link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="css/miestilos.css">
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-<div class= "titulo">
+
+<div class="titulo">
     <header>
         Contacto
     </header>
@@ -20,18 +24,102 @@
     <div id="navegacion">
         <main>
             <nav>
-              <a href = "index.html"> Inicio </a> | 
-              <a href = "fotos.html"> Fotos </a> | 
-              <a href = "videos.html"> Videos </a> | 
-              <a href = "Contacto.html"> Contacto </a> 
-             
+                <a href="index.html"> Inicio </a> |
+                <a href="fotos.html"> Fotos </a> |
+                <a href="videos.html"> Videos </a> |
+                <a href="Contacto.html"> Contacto </a>
+
             </nav>
     </div>
-    </main>
+    <h3> Informacion Personal</h3>
+    <br>
+</main>
+<div>
+    <form id="contacto" ¡name="formulario" method="get" action="procesar.html">
+        <p>
+            <label for="nombre">Nombre:
+                <!--<input>-Este elemento crea un campo de entrada. -->
+                <!-- maxlenght-Este atributo especifica el maximo numero de caracteres. -->
+                <input type="text" name="nombre" maxlength="15" id="nombre">
+            </label>
+        </p>
+        <p>
+            <label for="clave"> Clave:
+                <!--<input>-Este elemento crea un campo de entrada. -->
+                <!-- maxlenght-Este atributo especifica el maximo numero de caracteres. -->
+                <input type="password" name="clave" maxlength="15" id="clave">
+            </label>
+        </p>
 
-    <footer>
-        <address>Alajuela, Costa Rica</address>
-        <small>&copy; Derechos Rservados 2024</small>
-    </footer>
+        <!-- email -Este valor genera un campo de entrada
+         para insertar cuentas de correo. -->
+
+        <p>
+            <label>Correo: <input type="email" name="correo">
+            </label>
+        </p>
+        <!-- tel -Este valor genera un campo de entrada
+         para insertar numeros de telefono. -->
+
+        <p>
+            <label>Telefono: <input type="tel" name="telefono" ¡ placeholder="506- 8765-4321">
+            </label>
+        </p>
+
+        <!-- url-Este valor genera un campo de entrada para insertar URL. -->
+        <p>
+            <label>Sitio Web: <input type="url" name="sitioweb">
+            </label>
+        </p>
+
+        <!-- range -Este valor genera un campo de entrada para
+         insertar un rango de numeros -->
+
+        <p>
+            <label>
+                Estatura: <input type="range" min="50" max="300" name="estatura" value="250">
+            </label>
+        </p>
+
+        <!--
+        min -El valor de este atributo determina
+        el valor minimo que acepta el campo.
+        max -El valor de este atributo determina
+        el valor maximo que acepta el campo. -->
+        <p>
+            <label>
+                Edad: <input type="number" min="13" max="100" name="edad">
+            </label>
+        </p>
+        <div>
+            <h3> Años de experiencia:
+            </h3>
+            </br>
+            <!-- radio-Este valor genera un boton de opcion
+     para seleccionar una opcion de varias posibles-->
+            <p>
+                <label>Experiencia:
+                    <input type="radio" name="experiencia"
+                     value="1" cheakhead> 1 año
+
+                    <input type="radio" name="experiencia"
+                     value="2"> 2 año
+
+                     <input type="radio" name="experiencia"
+                     value="3"> 3 año
+
+                     <input type="radio" name="experiencia"
+                     value="mas de 3"> Mas de 3 años
+                </label>
+            </p>
+        </div>
+
+    </form>
+</div>
+<footer>
+    <address>Alajuela, Costa Rica</address>
+    <small>&copy; Derechos Reservados 2024</small>
+</footer>
 </body>
+
 </html>
