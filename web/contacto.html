@@ -99,17 +99,13 @@
      para seleccionar una opcion de varias posibles-->
             <p>
                 <label>Experiencia:
-                    <input type="radio" name="experiencia"
-                     value="1" cheakhead> 1 año
+                    <input type="radio" name="experiencia" value="1" cheakhead> 1 año
 
-                    <input type="radio" name="experiencia"
-                     value="2"> 2 año
+                    <input type="radio" name="experiencia" value="2"> 2 año
 
-                     <input type="radio" name="experiencia"
-                     value="3"> 3 año
+                    <input type="radio" name="experiencia" value="3"> 3 año
 
-                     <input type="radio" name="experiencia"
-                     value="mas de 3"> Mas de 3 años
+                    <input type="radio" name="experiencia" value="mas de 3"> Mas de 3 años
                 </label>
             </p>
         </div>
@@ -123,3 +119,87 @@
 </body>
 
 </html>
+<div>
+    <h3>Fecha de nacimiento</h3>
+    <!--- date-- este valor genera un campo de entrada para insertar un fecha-->
+    <input id="calendario" type="date" name="Fecha">
+</div>
+
+<div>
+    <h3>Color </h3>
+
+    <input type="color" name="micolor" value="#99BB00">
+</div>
+
+<!-- textarea>-- este elemento crea un campo de entrada para insertar multiples lineas de texto, 
+el tamaño se declara con numeros enteros usando atributos rows y cols-->
+
+<p>
+    <label> texto:
+        <textarea name="texto" cols="50" rows="6"></textarea>
+    </label>
+</p>
+
+<div>
+    <!-- select)- este elmento crea una lista de opciones que el usuario puede elegir, junto con option para definit cada opcion-->
+
+    <select> name="Libro" id="listado">
+        <label for="listado"> Libros:</label>
+
+        <option value="1">Elegir Libro</option>
+        <option value="2">IT</option>
+        <option value="3">Carrie</option>
+        <option value="4">El resplandor</option>
+        <option value="5">Misery</option>
+
+    </select>
+</div>
+<div>
+    <h3>
+        Conocimientos
+    </h3>
+    <!--checkbox- Este valor genera una casilla de control que permite al usuario activar o desactivar la opcion-->
+    <p><label>HTML<input type="checkbox" name="conocimientos" value="HTML" checked> </label> </p>
+    <p><label>CSS<input type="checkbox" name="conocimientos" value="CSS"> </label> </p>
+    <p><label>JavaScript<input type="checkbox" name="conocimientos" value="JavaScript"> </label> </p>
+    <p><label>XML<input type="checkbox" name="conocimientos" value="XML"> </label> </p>
+</div>
+
+<div>
+    <!-- submit- este valor genera un boton para enviar el formulario-->
+    <p><input type="submit" value="Enviar"></p>
+</div>
+
+</form>
+</div>
+
+</main>
+<footer> <!-- etquiteca de pie de pagina-->
+    <address> Alajuela, Costa Rica</address> <!-- poner una direccón-->
+    <small>&copy; Derechos reservados 2024</small> <!-- hacer la letra mas pequeña-->
+</footer>
+</body>
+
+</html>
+
+<script>
+
+    var fechaActual = new Date();
+
+
+    var dia = fechaActual.getDate(); // obtengo el dia
+    var mes = fechaActual.getMonth() + 1; // Sumar 1 porque los meses van de 0 a 11
+    var año = fechaActual.getFullYear(); // obtengo el mes
+
+    if (mes < 10) {
+        mes = "0" + mes
+    }
+
+    if (dia < 10) {
+        dia = "0" + dia
+    }
+
+    var Fechaformateada = año + "-" + mes + "-" + dia
+
+    document.getElementById('calendario').value = Fechaformateada
+</script>

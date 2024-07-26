@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesar Datos del Formulario</title>
+</head>
+
+<body>
+    <script>
+        // Función para obtener los parámetros de la URL
+        function getURLParameters() {
+            var params = {};
+            var urlParams = new URLSearchParams(window.location.search);
+
+            for (const [key, value] of urlParams) {
+                // Si la clave ya existe en params, conviértela en un array
+                if (params[key]) {
+                    if (!Array.isArray(params[key])) {
+                        params[key] = [params[key]]; // Convierte el valor existente en un array
+                    }
+                    params[key].push(value); // Agrega el nuevo valor al array
+                } else {
+                    params[key] = value; // Simplemente guarda el valor si la clave no existe aún
+                }
+            }
+
+            return params;
+        }
+
+        // Obtener parámetros de la URL
+        var formData = getURLParameters();
+
+        // Mostrar datos en el cuerpo del documento
+        var body = document.body;
+        for (var key in formData) {
+            if (formData.hasOwnProperty(key)) {
+                var paragraph = document.createElement("p");
+
+                // Si el valor asociado a la clave es un array, únelo en una cadena
+                var displayValue = Array.isArray(formData[key]) ? formData[key].join(", ") : formData[key];
+
+                paragraph.textContent = key + ": " + displayValue;
+                body.appendChild(paragraph);
+            }
+        }
+    </script>
+</body>
+
+</html>
